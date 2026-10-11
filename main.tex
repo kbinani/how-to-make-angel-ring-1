@@ -2,6 +2,21 @@
 \usepackage[dvipdfmx]{graphicx,color}
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{pxjahyper}
+\usepackage{xcolor}
+
+\makeatletter
+\newcommand{\chklink}[2]{%
+  \@ifundefined{r@#1}{%
+    \textcolor{blue}{#2}%
+  }{%
+    \hyperref[#1]{#2}%
+  }%
+}
+\makeatother
+
+\newcommand{\asin}[1]{%
+  \href{https://www.amazon.co.jp/dp/#1}{ASIN:#1}%
+}
 
 \setcounter{secnumdepth}{4}
 
@@ -27,20 +42,20 @@
 \chapter{製作}
 \section{真空注型}
 \begin{enumerate}
-	\item \hyperlink{label_mold}{型}を準備する。
+	\item \chklink{label_mold}{型}を準備する。
 	\begin{enumerate}
 		\item 型を清掃する。
-		\item \hyperlink{label_mold_spacer}{スペーサ}と\hyperlink{label_mold}{型}を 2 枚の\hyperlink{label_mold_shell}{押さえ板}で挟み、%
-			\hyperlink{label_mold_clamp}{クランプ}で固定する。
+		\item \chklink{label_mold_spacer}{スペーサ}と\chklink{label_mold}{型}を 2 枚の\chklink{label_mold_shell}{押さえ板}で挟み、%
+			\chklink{label_mold_clamp}{クランプ}で固定する。
 			\begin{itemize}
 				\item 押さえ板の上面と型の上面を一致させるため、上面を下にして組み立てる。%
-					これは\hyperlink{label_vaccuum_chamber}{真空槽}に複数の型を縦に積む場合に、%
-					\hyperlink{label_mold_separator_grill}{落し蓋}が型を押さないようにするためである。%
+					これは\chklink{label_vacuum_chamber}{真空槽}に複数の型を縦に積む場合に、%
+					\chklink{label_mold_separator_grill}{落し蓋}が型を押さないようにするためである。%
 					この工夫により型の変形を防ぐ。
 				\item クランプの締め付けは程々にする。%
 					具体的には、組み立てた型を手で持った時、型内部の空洞の容積がほぼ変化しない程度の強さでクランプする。%
 					型内部の空洞の容積が変化すると沸騰槽と型内部で樹脂の移動が起こり、意図しない気泡の巻き込みが起こりやすくなるからである。%
-					\hyperlink{label_deforming}{脱泡}の操作が台無しになる。%
+					\chklink{label_deforming}{脱泡}の操作が台無しになる。%
 					またクランプの締め付けが強すぎると、型の製品となる面の肌が変形し品質を損なう。
 			\end{itemize}
 	\end{enumerate}
@@ -56,19 +71,19 @@
 			\item 空気圧ゲージの取扱説明書に従う。
 			\item 特に、オイル封入型の場合内圧を大気圧と一致させる為のプラグが付いているので、忘れずに操作する。
 		\end{itemize}
-		\item 真空槽の大気側プラグに\hyperlink{mold_capillary}{キャピラリ}を取り付ける。キャピラリの全てのバルブを閉位置にする。
+		\item 真空槽の大気側プラグに\chklink{mold_capillary}{キャピラリ}を取り付ける。キャピラリの全てのバルブを閉位置にする。
 		\item 真空槽の真空ポンプ側プラグと真空ポンプを接続する。真空槽の全てのバルブを閉位置にする。
 	\end{enumerate}
-	\item \hyperlink{link_resin}{樹脂}を準備する。
+	\item \chklink{link_resin}{樹脂}を準備する。
 	\begin{enumerate}
-		\item \hyperlink{link_scale}{秤}を\hyperlink{link_silicone_mat}{シリコーン樹脂マット}の上に設置する。
-		\item \hyperlink{link_stirrer}{攪拌棒}と\hyperlink{link_disposable_cup}{プラスチックカップ}を清掃する。
+		\item \chklink{link_scale}{秤}を\chklink{link_silicone_mat}{シリコーン樹脂マット}の上に設置する。
+		\item \chklink{link_stirrer}{攪拌棒}と\chklink{link_disposable_cup}{プラスチックカップ}を清掃する。
 		\item プラスチックカップの風袋を量る。
 		\item プラスチックカップに樹脂の主剤を所定の量量り取る。
 		\begin{itemize}
 			\item 注型する型の個数 $ \times $ 7.1g の主剤を用いる。
 		\end{itemize}
-		\item プラスチックカップに\hyperlink{label_pigment}{色素}を入れる。
+		\item プラスチックカップに\chklink{label_pigment}{色素}を入れる。
 		\begin{itemize}
 			\item 主剤 1.0 g に対して 1.0 滴の色素を用いる。
 		\end{itemize}
@@ -84,7 +99,7 @@
 	\end{enumerate}
 	\item 型の沸騰槽に樹脂を入れる。
 	\begin{itemize}
-		\item \hyperlink{label_syringe}{注射器}を用いて 7mL 量る。
+		\item \chklink{label_syringe}{注射器}を用いて 7mL 量る。
 	\end{itemize}
 	\item 型を真空槽に仕込む。
 	\begin{itemize}
@@ -104,7 +119,7 @@
 		\end{itemize}
 		\item 真空槽の真空ポンプ側バルブを閉位置にする。
 		\item 真空ポンプを停止する。
-		\item キャピラリの\hyperlink{label_syringe_needle_red}{注射針}が付いている側のバルブを開位置にする。
+		\item キャピラリの\chklink{label_syringe_needle_red}{注射針}が付いている側のバルブを開位置にする。
 		\item 空気圧ゲージがゲージ圧で -0.7 bar となるまで待機する。
 		\item 真空槽の大気側バルブを閉位置にする。
 		\item キャピラリの注射針が付いている側のバルブを閉位置にする。
@@ -119,7 +134,7 @@
 	\begin{enumerate}
 		\item この操作は、型の上部に引き込まれた気泡を取り除くためのもの。
 		\item 真空槽から型を取り出す。
-		\item プラスチックカップに残っている樹脂を注射器に 1mL 吸い込み、\hyperlink{label_syringe_needle_pink}{注射針}を取り付ける。このとき気泡が入らないように充分注意する。
+		\item プラスチックカップに残っている樹脂を注射器に 1mL 吸い込み、\chklink{label_syringe_needle_pink}{注射針}を取り付ける。このとき気泡が入らないように充分注意する。
 		\item シリンジを操作して注射針の中の気泡と樹脂を追い出す。樹脂が針先から 2、3 滴出る程度でよい。
 		\item 真空槽の底に空いているランナー部分の穴に注射針を挿入し、樹脂を注入する。
 		\begin{itemize}
@@ -137,97 +152,21 @@
 \section{型}\label{label_mold}
 
 \chapter{調達}
-
-\chapter{機材一覧}
-\begin{enumerate}
-	\item 光造形 3D プリンタ
-	\begin{itemize}
-		\item ELEGOO Saturn Ultra 14K
-	\end{itemize}
-	\item FDM 3D プリンタ
-	\begin{itemize}
-		\item Ender 3 V3 KE
-	\end{itemize}
-	\item 真空ポンプ
-	\begin{itemize}
-		\item BACOENG 3.6 CFM
-	\end{itemize}
-	\item 真空槽
-	\begin{itemize}
-		\item BACOENG 12L
-	\end{itemize}
-	\item 電子天秤
-	\begin{itemize}
-		\item 0.1g 単位で測れるもの
-	\end{itemize}
-	\item ミニリューター
-	\begin{itemize}
-		\item Dremel FINO
-	\end{itemize}
-\end{enumerate}
-
-\chapter{材料・消耗品一覧}
-\begin{enumerate}
-	\item エポキシ樹脂
-	\begin{itemize}
-		\item 日東化成 プラシール E384
-	\end{itemize}
-	\item シリコーン樹脂
-	\begin{itemize}
-		\item 旭化成 ワッカーシリコーン M8012
-	\end{itemize}
-	\item シリコーン樹脂硬化剤
-	\begin{itemize}
-		\item 旭化成 T40
-	\end{itemize}
-	\item MDF 板 12mm厚
-	\item レジン
-	\begin{itemize}
-		\item NOVA3D 水洗い高透明度レジン 透明
-	\end{itemize}
-	\item PLA フィラメント
-	\begin{itemize}
-		\item Ender PLA $ \phi $1.75mm
-	\end{itemize}
-	\item 工業用注射針 24G
-	\item 工業用注射針 20G
-	\item 注射器 1mL
-	\begin{itemize}
-		\item ロック口になっていて, ロック口の最も太い部分が $\phi$ 10mm のもの
-	\end{itemize}
-	\item シリコーンチューブ
-	\begin{itemize}
-		\item 内径 $\phi$8mm, 外径 $\phi$10mm
-	\end{itemize}
-	\item 気体用 Y 型継ぎ手
-	\begin{itemize}
-		\item 分岐先の 2 箇所にボールバルブの付いているもの
-		\item チューブ口の外径が $\phi$9mm のもの
-	\end{itemize}
-	\item シリコーンマット
-	\item 両面テープ
-	\item 紙やすり(耐水ペーパー)
-	\begin{itemize}
-		\item \#1000, \#1500, \#2000, \#3000
-	\end{itemize}
-	\item 研磨用コンパウンド
-	\begin{itemize}
-		\item タミヤ コンパウンド 仕上げ目
-	\end{itemize}
-	\item プラスチック製カップ
-	\item 調理用ヘラ
-	\item シリコーン製混ぜ棒
-\end{enumerate}
-
-\chapter{成形用治具等一覧}
-\chapter{治具等の制作方法}
-\section{型製作用原型}
-\section{原型ホルダ一式}
-\section{型一式}
-\section{型固定用スペーサ}
-\section{型固定用押さえ板}
-\section{昇圧速度調節用キャピラリ一式}
-\chapter{真空成形}
-\chapter{成形後処理}
+\begin{tabular}{lll} \hline
+	品名 & ID & 備考 \\ \hline
+	クランプ\label{label_mold_clamp} & \asin{B0D3TWFQYM} & \\
+	真空槽\label{label_vacuum_chamber} & \asin{B09QKQT76Z} & \\
+	落し蓋\label{label_mold_separator_grill} & \asin{B0D8BDKLCK} & \\
+	樹脂\label{link_resin} & \asin{B09BJ2F91Y} & \\
+	秤\label{link_scale} & \asin{B072TBYM2K} & \\
+	シリコーン樹脂マット\label{link_silicone_mat} & \asin{B07KT39VH3} & \\
+	攪拌棒\label{link_stirrer} & \asin{B0DCJWFG8K} & \\
+	プラスチックカップ\label{link_disposable_cup} & \asin{B08F1Y5GFL} & \\
+	色素\label{label_pigment} & \asin{B0CJZMNCVS} & \\
+	注射器\label{label_syringe} & \asin{B0BZ4GRGQX} & \\
+	注射針(24G)\label{label_syringe_needle_red} & \asin{B0CN4RSC4D} & \\
+	注射針(20G)\label{label_syringe_needle_pink} & \asin{B0CMV9C128} & \\
+	\hline
+\end{tabular}
 
 \end{document}

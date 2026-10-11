@@ -3,8 +3,11 @@ all: main.pdf
 main.pdf: main.dvi
 	dvipdfmx main.dvi
 
-main.dvi: main.tex
+main.toc: main.tex
+	uplatex main.tex
+
+main.dvi: main.tex main.toc
 	uplatex main.tex
 
 clean:
-	rm main.dvi main.pdf main.aux
+	rm main.dvi main.pdf main.aux main.toc
