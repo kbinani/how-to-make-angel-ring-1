@@ -10,16 +10,16 @@
 
 \makeatletter
 \newcommand{\chklink}[2]{%
-  \@ifundefined{r@#1}{%
-    \textcolor{blue}{#2}%
-  }{%
-    \hyperref[#1]{#2}%
-  }%
+	\@ifundefined{r@#1}{%
+		\textcolor{red}{#2 (\texttt{\detokenize{#1}})}%
+	}{%
+		\hyperref[#1]{#2}%
+	}%
 }
 \makeatother
 
 \newcommand{\asin}[1]{%
-  \href{https://www.amazon.co.jp/dp/#1}{ASIN:#1}%
+  \href{https://www.amazon.co.jp/dp/#1}{\texttt{ASIN:#1}}%
 }
 
 \renewcommand{\prechaptername}{}
@@ -31,8 +31,8 @@
 
 \newcommand{\file}[2]{%
   \leavevmode
-  \rlap{\textcolor{blue}{#2}}%
-  \textattachfile{#1}{\phantom{#2}}%
+  \rlap{\textcolor{violet}{\texttt{#2}}}%
+  \textattachfile{#1}{\phantom{\texttt{#2}}}%
 }
 
 \setcounter{secnumdepth}{4}
@@ -43,6 +43,8 @@
 
 \hypersetup{ %
 	colorlinks=true, %
+	linkcolor=blue, %
+	urlcolor=blue, %
 	setpagesize=false, %
 	bookmarks=true, %
 	bookmarksdepth=tocdepth, %
@@ -92,7 +94,7 @@
 			\item 空気圧ゲージの取扱説明書に従う。
 			\item 特に、オイル封入型の場合内圧を大気圧と一致させる為のプラグが付いているので、忘れずに操作する。
 		\end{itemize}
-		\item 真空槽の大気側プラグに\chklink{mold_capillary}{キャピラリ}を取り付ける。キャピラリの全てのバルブを閉位置にする。
+		\item 真空槽の大気側プラグに\chklink{label:mold_capillary}{キャピラリ}を取り付ける。キャピラリの全てのバルブを閉位置にする。
 		\item 真空槽の真空ポンプ側プラグと真空ポンプを接続する。真空槽の全てのバルブを閉位置にする。
 	\end{enumerate}
 	\item \chklink{label:resin}{樹脂}を準備する。
