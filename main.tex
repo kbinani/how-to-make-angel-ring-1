@@ -1,11 +1,12 @@
 \documentclass[uplatex]{ujreport}
 \usepackage[dvipdfmx]{graphicx,color}
 \usepackage[dvipdfmx]{hyperref}
-\usepackage{pxjahyper}
+\usepackage[dvipdfmx]{attachfile2}
 \usepackage{xcolor}
 \usepackage[top=20mm,bottom=20mm,left=20mm,right=20mm]{geometry}
 \usepackage{titlesec}
 \usepackage{etoolbox}
+\usepackage{pxjahyper}
 
 \makeatletter
 \newcommand{\chklink}[2]{%
@@ -27,6 +28,12 @@
 \makeatletter
 \patchcmd{\l@chapter}{4zw}{2zw}{}{}
 \makeatother
+
+\newcommand{\file}[2]{%
+  \leavevmode
+  \rlap{\textcolor{blue}{#2}}%
+  \textattachfile{#1}{\phantom{#2}}%
+}
 
 \setcounter{secnumdepth}{4}
 
