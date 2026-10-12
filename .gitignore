@@ -3,4 +3,6 @@
 *.toc
 *.log
 *.pdf
-*out
+*.out
+*.atfi
+.DS_Store
