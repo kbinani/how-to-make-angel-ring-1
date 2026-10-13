@@ -20,7 +20,7 @@
 \makeatother
 
 \newcommand{\asin}[1]{%
-  \href{https://www.amazon.co.jp/dp/#1}{\texttt{ASIN:#1}}%
+	\href{https://www.amazon.co.jp/dp/#1}{\texttt{ASIN:#1}}%
 }
 
 \renewcommand{\prechaptername}{}
@@ -31,9 +31,13 @@
 \makeatother
 
 \newcommand{\file}[2]{%
-  \leavevmode
-  \rlap{\textcolor{violet}{\texttt{#2}}}%
-  \textattachfile{./attachment/#1}{\phantom{\texttt{#2}}}%
+	\leavevmode
+	\rlap{\textcolor{violet}{\texttt{#2}}}%
+	\textattachfile{./attachment/#1}{\phantom{\texttt{#2}}}%
+}
+
+\newcommand{\img}[1]{%
+	\includegraphics[width=100mm,height=75mm,keepaspectratio]{#1}	
 }
 
 \setcounter{secnumdepth}{4}
@@ -177,6 +181,15 @@
 \end{enumerate}
 
 \section{型}\label{label:mold}
+
+\begin{figure}[htbp]
+\centering
+\img{./img/mold.jpeg}
+\caption{型}
+\label{fig:mold}
+\end{figure}
+
+図\ref{fig:mold}に型の外観を示す。
 \chklink{label:rubber}{シリコーン樹脂}で製作する。
 型は 2 個一組で組み立てて使用する。
 2 個の型は、同一の\chklink{label:prototype}{原型}を用いて製作し、パッキン部の凹凸のみが異なる。
@@ -222,16 +235,43 @@
 \end{enumerate}
 
 \section{スペーサ}\label{label:mold_spacer}
+
+\begin{figure}[htbp]
+\centering
+\img{./img/mold_spacer.jpeg}
+\caption{スペーサ}
+\label{fig:mold_spacer}
+\end{figure}
+
+図\ref{fig:mold_spacer}にスペーサの外観を示す。
 \chklink{label:mold}{型}を\chklink{label:mold_shell}{押さえ板}で挟み固定するとき、型が圧縮される量を制限するためのもの。
+型 1 個につき 2 個製作する。
 製作した型を組み立てて厚みを計測し、その厚みより 0.2mm 薄くしたものを作成する。
 \chklink{label:3dprinter}{3D プリンタ}で\chklink{label:pla}{PLA フィラメント}で制作する。
 
 形状の例はこちら: \file{mold-spacer.stl}{mold-spacer.stl}
 
 \section{押さえ板}\label{label:mold_shell}
-厚さ 12mm の \chklink{label:mdf}{MDF 板材}を 123mm $ \times $ 112mm に切断する。\chklink{label:mold}{型} 1 個あたり 2 枚用意する。
+
+\begin{figure}[htbp]
+\centering
+\img{./img/mold_shell.jpeg}
+\caption{押さえ板}
+\label{fig:mold_shell}
+\end{figure}
+
+図\ref{fig:mold_shell}に押さえ板の外観を示す。
+厚さ 12mm の \chklink{label:mdf}{MDF 板材}を 123mm $ \times $ 112mm に切断する。\chklink{label:mold}{型} 1 個あたり 2 枚製作する。
 
 \section{キャピラリ}\label{label:mold_capillary}
+
+\begin{figure}[htbp]
+\centering
+\img{./img/capillary.jpeg}
+\caption{キャピラリ}
+\label{fig:capillary}
+\end{figure}
+
 真空槽に流入する空気の流量を抑制し、注型作業の再現性を良くするために用いる。
 真空注型は、真空から大気圧に戻す際のごく序盤でほとんどの樹脂が型の空洞部に流れ込むため、序盤の圧力制御は非常に重要である。
 \chklink{label:vacuum_chamber}{真空槽}に付属のボールバルブを手動で操作する場合、流量の細かな制御が難しく再現性が低い。
@@ -246,13 +286,6 @@
 	\item \chklink{label:hose_nipple9mm}{ホースニップル(G 1/4)}の雄ねじに\chklink{label:seal_tape}{シールテープ}を巻き、真空槽の大気側雌ねじに装着する。
 	\item 三叉バルブのバルブが付いていないプラグと、前述のホースニップル(G 1/4)と、を前述の長さ 50mm のシリコーンチューブを使って接続する。真空槽を片付ける時は、こちらのシリコーンチューブの、三叉バルブ側の端を三叉バルブから外す。
 \end{enumerate}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=100mm]{./img/capillary.jpeg}
-\caption{キャピラリ}
-\label{fig:capillary}
-\end{figure}
 
 \chapter{調達}
 \begin{tabular}{lll} \hline
