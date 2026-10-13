@@ -3,7 +3,7 @@ all: main.pdf
 main.pdf: main.dvi
 	dvipdfmx main.dvi
 
-main.toc: main.tex
+main.toc: main.tex attachment/*.* img/*.*
 	uplatex main.tex
 
 main.dvi: main.tex main.toc
