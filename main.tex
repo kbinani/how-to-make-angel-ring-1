@@ -8,6 +8,7 @@
 \usepackage{etoolbox}
 \usepackage{pxjahyper}
 \usepackage{chngcntr}
+\usepackage[figure]{hypcap}
 
 \makeatletter
 \newcommand{\chklink}[2]{%
@@ -194,11 +195,19 @@
 \begin{figure}[htbp]
 	\centering
 	\img{./img/mold.jpeg}
-	\caption{型}
+	\caption{型の外観}
 	\label{fig:mold}
 \end{figure}
 
-図\ref{fig:mold}に型の外観を示す。
+\begin{figure}[htbp]
+	\centering
+	\img{./img/mold_description.png}
+	\caption{型各部の呼称}
+	\label{fig:mold_description}
+	\label{label:boiling_tank}
+\end{figure}
+
+図\ref{fig:mold}に型の外観を示す。また型各部の呼称を図\ref{fig:mold_description}に示す。
 \chklink{label:rubber}{シリコーン樹脂}で製作する。
 型は 2 個一組で組み立てて使用する。
 2 個の型は、同一の\chklink{label:prototype}{原型}を用いて製作し、パッキン部の凹凸のみが異なる。

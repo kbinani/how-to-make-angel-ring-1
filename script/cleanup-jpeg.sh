@@ -2,6 +2,6 @@
 
 set -euo pipefail
 
-tmp=$(mktemp)
+tmp="$(mktemp).jpeg"
 magick "$1" -strip -units PixelsPerInch -density 72 "$tmp"
-mv "$tmp" "$1"
+mv "$tmp" "${1%.*}.jpeg"
