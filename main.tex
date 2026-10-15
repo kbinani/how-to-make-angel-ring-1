@@ -99,9 +99,6 @@
 	\renewcommand*{\glsgroupskip}{}%
 }
 
-\titleformat{\paragraph}[display]{\normalfont\normalsize\bfseries}{}{0pt}{}
-\titlespacing{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
-
 \title{天使の輪っかの作り方1 \\ [20mm]
 \includegraphics[width=100mm]{img/cover.jpeg}}
 \author{kbinani}
@@ -124,13 +121,18 @@
 
 \chapter{はじめに}
 
-\paragraph{本冊子について}
+\noindent\textbf{本冊子について}\par
+\vspace{0.5\baselineskip}
 本冊子は、BOOTH に出品した「\href{https://kbinani.booth.pm/items/8443733}{(非公式)天音かなた・ミニチュア「天使の輪っか」エポキシ樹脂製・約5cm}」の製作手順を記したものである。
 量産のための手順のみとし、開発過程は省略した。
 章の順番は、最終仕上げを先頭に、製作のための治具製作などが後半となるよう、およそ時系列逆順に記した。
+Q\&Aの章には想定問答の他に、著者が知りたいと思っているが検討できていない疑問に対する予想・見解もQ\&Aの形式で記した。
 最後の章に製作には必要な物品リストを掲載した。
 
-\paragraph{添付ファイルについて}
+\vspace{\baselineskip}
+
+\noindent\textbf{添付ファイルについて}\par
+\vspace{0.5\baselineskip}
 本冊子の PDF にはファイルを埋め込んである。
 紫色のファイル名の文字にはリンクが張ってあり、添付ファイルの取り出しに対応した PDF ビューワで閲覧するとファイルを取得できるようになっている。
 Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダブルクリックすることでファイルを取得できる。
@@ -519,6 +521,26 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 	\item \gls{ホースニップル(G 1/4)}の雄ねじに\gls{シールテープ}を巻き、真空槽の大気側雌ねじに装着する。
 	\item 三叉バルブのバルブが付いていないプラグと、前述のホースニップル(G 1/4)と、を前述の長さ 50mm のシリコーンチューブを使って接続する。真空槽を片付ける時は、こちらのシリコーンチューブの、三叉バルブ側の端を三叉バルブから外す。
 \end{enumerate}
+
+\chapter{Q\&A}
+
+\paragraph{Q.}\chklink{label:mold}{型}の材質はワッカーシリコーン M8012 以外だとだめなのか。
+\paragraph{A.}ワッカーシリコーン M4470、M4503、M8012 を試した。他の種類は分からない。試した中ではいずれも本作品の型として利用できそうだった。M8012 と比較して M4470 は少々硬くやや高価、M4503 は同程度の硬さで引張強度が強いが高価。M4503 の引張強度は本作品の型として使うにはオーバースペックだと感じる。安価で程よい柔らかさの M8012 を継続して利用している。
+
+\paragraph{Q.}\chklink{label:mold_holder}{原型ホルダー}のパッキンが二重になっているが、一重としていない理由は。
+\paragraph{A.}理由は特に無い。念のため二重にして充分だったのでそのまま使っている。脱型した後の樹脂で濡れた痕跡の範囲を見る限り、一重でも充分そうだという判断。パッキンを無しにするのは試してみないと分からないが、漏れそうな予感がする。
+
+\paragraph{Q.}\gls{レジンプリンター}のプリント設定は。
+\paragraph{A.}\href{https://scrapbox.io/kbinani/Nova3D水洗い高透明度レジンを層厚さ0.01mmの設定で使用する}{https://scrapbox.io/kbinani/Nova3D水洗い高透明度レジンを層厚さ0.01mmの設定で使用する}で公開しているので参照してほしい。
+
+\paragraph{Q.}\chklink{label:deforming}{脱泡}の操作で使用している\gls{注射器}の選定理由は。
+\paragraph{A.}樹脂の粘度が高いため細い針だと抵抗が大きい。シリンジの断面積が小さく、高粘度の液に対して細い針を使っていても小さい力で操作できることから。樹脂を注入する時、注射針がすっぽ抜ける事故を度々起こしたのでルアーロック付きのものを使っている。ルアーロック付きであれば、より太い注射器でも問題ないと思う(握力は必要)。
+
+\paragraph{Q.}\gls{エポキシ樹脂}の種類は他のものは試したか。
+\paragraph{A.}試していない。
+
+\paragraph{Q.}\chklink{label:mold_spacer}{スペーサー}の製作で型の厚みより 0.2mm 薄くするとあるが、0.2mm の理由は。
+\paragraph{A.}経験則。隙間から樹脂が漏れないようにするために必要なクランプ力を維持しつつ、型の変形を最小限に抑えたい、という考え方で試行錯誤して決めた量。0.2mm としているが、型の厚みを増やし、クランプ時の圧縮量を減らすのが理想だと思う。
 
 \chapter{調達}
 \printnoidxglossary[style=items,sort=use]
