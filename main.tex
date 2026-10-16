@@ -43,8 +43,8 @@
 	\includegraphics[width=100mm,height=75mm,keepaspectratio]{#1}
 }
 
-\NewDocumentCommand{\word}{m m}{%
-  \newglossaryentry{#1}{name={#1},user1={#2},description={}}%
+\NewDocumentCommand{\word}{m m O{}}{%
+  \newglossaryentry{#1}{name={#1},user1={#2},user2={#3},description={}}%
 }
 
 \newlength{\qindent}
@@ -66,51 +66,52 @@
 \counterwithout{figure}{chapter}
 
 \word{クランプ}{\asin{B0D3TWFQYM}}
-\word{真空槽}{\asin{B09QKQT76Z}}
+\word{真空槽}{\asin{B09QKQT76Z}}[BACOENG 製]
 \word{中敷き}{\asin{B0D8BDKLCK}}
-\word{エポキシ樹脂}{\asin{B09BJ2F91Y}}
-\word{秤}{\asin{B072TBYM2K}}
+\word{エポキシ樹脂}{\asin{B09BJ2F91Y}}[デコレジーナ製「エポキシ樹脂 E384」]
+\word{秤}{\asin{B072TBYM2K}}[タニタ製「クッキングスケール KJ-212 WH」]
 \word{シリコーン樹脂マット}{\asin{B07KT39VH3}}
 \word{攪拌棒}{\asin{B0DCJWFG8K}}
 \word{プラスチックカップ}{\asin{B08F1Y5GFL}}
-\word{色素}{\asin{B0CJZMNCVS}}
+\word{色素}{\asin{B0CJZMNCVS}}[パジコ製「宝石の雫 ロイヤルブルー」]
 \word{注射器}{\asin{B0BZ4GRGQX}}
 \word{注射針(24G)}{\asin{B0CN4RSC4D}}
 \word{注射針(20G)}{\asin{B0CMV9C128}}
 \word{MDF 板材}{\asin{B0B6ZY4SFP}}
-\word{3D プリンター}{\asin{B0F9DXZBW6}}
-\word{PLA}{\asin{B0C89KPYP3}}
+\word{3D プリンター}{\asin{B0F9DXZBW6}}[Creality 製「Ender3 V3 KE」]
+\word{PLA}{\asin{B0C89KPYP3}}[Creality 製「Ender PLA フィラメント」]
 \word{シリコーンチューブ}{\asin{B0DD7D93FN}}
 \word{三叉バルブ}{\asin{B0DRCXKLVQ}}
-\word{ホースニップル(G 1/4)}{\asin{B003FMS2Y6}}
-\word{シールテープ}{\asin{B00VDTZMJQ}}
-\word{シリコーン樹脂}{\asin{B083QQJ2JS}}
-\word{両面テープ}{\asin{B07NPXBD1X}}
-\word{マスキングテープ}{\asin{B009LALTUA}}
-\word{攪拌用ヘラ}{\asin{B019BWMXX4}}
-\word{シリコーンブロアー}{\asin{B0932Z7646}}
-\word{下敷き}{\asin{B00777S0A6}}
-\word{パテ}{\asin{B000R9N5VU}}
-\word{レジンプリンター}{\asin{B0DT99F529}}
-\word{レジン}{\asin{B0C61HMFMR}}
-\word{コンパウンド}{\asin{B0CJJDTVS9}}
+\word{ホースニップル(G 1/4)}{\asin{B003FMS2Y6}}[SK11 製「ホースニップル外ネジ G(PF) 1/4 HG-1209 0200」]
+\word{シールテープ}{\asin{B00VDTZMJQ}}[SK11 製「シールテープ SST-0805」]
+\word{シリコーン樹脂}{\asin{B083QQJ2JS}}[旭化成ワッカーシリコーン製「ELASTOSIL(R) M8012」]
+\word{両面テープ}{\asin{B07NPXBD1X}}[KAWAGUCHI 製「水に強い布用両面テープ」]
+\word{マスキングテープ}{\asin{B009LALTUA}}[3M 製「マスキングテープ 243J Plus」]
+\word{攪拌用ヘラ}{\asin{B019BWMXX4}}[貝印製「パレットナイフ」]
+\word{シリコーンブロアー}{\asin{B0932Z7646}}[ハクバ製「シリコンブロアーポータブル 02 ブラック」]
+\word{下敷き}{\asin{B00777S0A6}}[ツクワ製]
+\word{パテ}{\asin{B000R9N5VU}}[タミヤ製「タミヤパテ(ホワイト) 87059」]
+\word{レジンプリンター}{\asin{B0DT99F529}}[ELEGOO 製「Saturn 4 Ultra 16K」]
+\word{レジン}{\asin{B0C61HMFMR}}[NOVA3D 製「水洗い高透明レジン」]
+\word{コンパウンド}{\asin{B0CJJDTVS9}}[タミヤ製「タミヤコンパウンド 仕上げ目 87070」]
 \word{バフ}{\asin{B0FPLD3NJ4}}
-\word{ミニリューター}{\asin{B074WCD7VR}}
+\word{ミニリューター}{\asin{B074WCD7VR}}[Dremel 製「ペン型ミニルーター FINO」]
 \makenoidxglossaries
 
 \newglossarystyle{items}{%
 	\renewenvironment{theglossary}
-		{\begin{longtable}[l]{ll}}
+		{\begin{longtable}[l]{lll}}
 		{\hline\end{longtable}}%
 	\renewcommand*{\glossaryheader}{%
 		\hline
-		品名 & 入手先 \\ \hline
+		品名 & 入手先 & メーカー等 \\ \hline
 		\endhead
 	}%
 	\renewcommand*{\glsgroupheading}[1]{}%
 	\renewcommand*{\glossentry}[2]{%
 		\glstarget{##1}{\glossentryname{##1}} &
-		\glsentryuseri{##1} \\
+		\glsentryuseri{##1} &
+		\glsentryuserii{##1} \\
 	}%
 	\renewcommand*{\glsgroupskip}{}%
 }
