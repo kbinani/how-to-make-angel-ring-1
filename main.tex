@@ -1,6 +1,7 @@
 \documentclass{ltjreport}
 \usepackage{graphicx}
 \usepackage{color}
+\usepackage{siunitx}
 \usepackage{hyperref}
 \usepackage{attachfile2}
 \usepackage{xcolor}
@@ -556,7 +557,27 @@ M4503 の引張強度は本作品の型として使うにはオーバースペ�
 
 \qa
 {\gls{レジンプリンター}のプリント設定は。}
-{\href{https://scrapbox.io/kbinani/Nova3D\%E6\%B0\%B4\%E6\%B4\%97\%E3\%81\%84\%E9\%AB\%98\%E9\%80\%8F\%E6\%98\%8E\%E5\%BA\%A6\%E3\%83\%AC\%E3\%82\%B8\%E3\%83\%B3\%E3\%82\%92\%E5\%B1\%A4\%E5\%8E\%9A\%E3\%81\%950.01mm\%E3\%81\%AE\%E8\%A8\%AD\%E5\%AE\%9A\%E3\%81\%A7\%E4\%BD\%BF\%E7\%94\%A8\%E3\%81\%99\%E3\%82\%8B}{https://scrapbox.io/kbinani/Nova3D水洗い高透明度レジンを層厚さ0.01mmの設定で使用する}で公開しているので参照いただきたい。}
+{以下の通り:\\
+\\
+\begin{tabular}{llS[table-format=2.2]@{\,}l}
+	層厚さ & & 0.01 & mm \\
+	\hline
+	初期層 & 層数 & 5 & \\
+		& 遷移層の数 & 4 & \\
+		& 露光時間 & 5 & 秒 \\
+		& 養生前に待機 & 40 & 秒 \\
+		& リリース前に待機 & 12 & 秒 \\
+		& リリース後に待機 & 0 & \\
+	\hline
+	通常層 & 露光時間 & 1.8 & 秒 \\
+		& 養生前に待機 & 3 & 秒 \\
+		& リリース前に待機 & 0.5 & 秒 \\
+		& リリース後に待機 & 0 & \\
+	\hline
+	アンチエイリアス & & \multicolumn{2}{l}{無効} \\
+	印刷速度 & & \multicolumn{2}{l}{標準} \\
+	レジン加熱 & & \multicolumn{2}{l}{あり} \\
+\end{tabular}}
 
 \qa
 {\chklink{label:deforming}{脱泡}の操作で使用している\gls{注射器}の選定理由は。}
