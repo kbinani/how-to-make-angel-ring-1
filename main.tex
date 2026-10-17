@@ -13,7 +13,7 @@
 \usepackage[nogroupskip,section=none]{glossaries}
 
 \makeatletter
-\newcommand{\chklink}[2]{%
+\newcommand{\link}[2]{%
 	\@ifundefined{r@#1}{%
 		\textcolor{red}{#2 (\texttt{\detokenize{#1}})}%
 	}{%
@@ -177,7 +177,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{脱型と仕上げ}
 \gls{エポキシ樹脂}の主剤と硬化剤を混合してから 72 時間以上経過後に脱型する。
-\chklink{label:runner}{ランナー部}分をカッターナイフで切り、\chklink{label:mold}{型}の合わせ面部分に樹脂のはみ出しがあれば除去する。
+\link{ln:runner}{ランナー部}分をカッターナイフで切り、\link{ln:mold}{型}の合わせ面部分に樹脂のはみ出しがあれば除去する。
 表紙の図は脱型作業中の造形物の様子である。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -185,10 +185,10 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{真空注型}
 \begin{enumerate}
-	\item \chklink{label:mold}{型}を準備する。
+	\item \link{ln:mold}{型}を準備する。
 	\begin{enumerate}
 		\item 型を清掃する。
-		\item \chklink{label:mold_spacer}{スペーサー}と\chklink{label:mold}{型}を 2 枚の\chklink{label:mold_shell}{押さえ板}で挟み、%
+		\item \link{ln:mold_spacer}{スペーサー}と\link{ln:mold}{型}を 2 枚の\link{ln:mold_shell}{押さえ板}で挟み、%
 			\gls{クランプ}で固定する。
 			図\ref{fig:assembled_mold}に組み立てた型一式の様子を示す。
 			\begin{figure}[htbp]
@@ -209,8 +209,8 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 					\end{figure}
 				\item クランプの締め付けは程々にする。%
 					具体的には、組み立てた型を手で持った時、型内部の空洞の容積がほぼ変化しない程度の強さでクランプする。%
-					型内部の空洞の容積が変化すると\chklink{label:boiling_tank}{沸騰槽}と型内部で樹脂の移動が起こり、意図しない気泡の巻き込みが起こりやすくなるからである。%
-					\chklink{label:deforming}{脱泡}の操作が台無しになる。%
+					型内部の空洞の容積が変化すると\link{ln:boiling_tank}{沸騰槽}と型内部で樹脂の移動が起こり、意図しない気泡の巻き込みが起こりやすくなるからである。%
+					\link{ln:deforming}{脱泡}の操作が台無しになる。%
 					またクランプの締め付けが強すぎると、型表面の肌が変形し品質を損なう。
 			\end{itemize}
 	\end{enumerate}
@@ -226,7 +226,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 			\item 空気圧ゲージの取扱説明書に従う。
 			\item オイル封入型の場合内圧を大気圧と一致させる為のプラグが付いているので、忘れずに操作する。
 		\end{itemize}
-		\item 真空槽の大気側プラグに\chklink{label:mold_capillary}{キャピラリ}を取り付ける。キャピラリの全てのバルブを全閉にする。
+		\item 真空槽の大気側プラグに\link{ln:mold_capillary}{キャピラリ}を取り付ける。キャピラリの全てのバルブを全閉にする。
 		\item 真空槽の真空ポンプ側プラグと真空ポンプを接続する。真空槽の全てのバルブを全閉にする。
 	\end{enumerate}
 	\item \gls{エポキシ樹脂}を準備する。
@@ -285,7 +285,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 		\end{itemize}
 		\item 操作したバルブを全て全閉に戻す。
 	\end{enumerate}
-	\item 脱泡を行う。\label{label:deforming}
+	\item 脱泡を行う。\label{ln:deforming}
 
 	この操作は、型の上部に引き込まれた気泡を取り除くために行う。
 	\begin{figure}[htbp]
@@ -319,7 +319,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 型
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{型}\label{label:mold}
+\section{型}\label{ln:mold}
 
 \begin{figure}[htbp]
 	\centering
@@ -333,27 +333,27 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 	\img{./img/mold_description.jpeg}
 	\caption{型各部の呼称}
 	\label{fig:mold_description}
-	\label{label:boiling_tank}
-	\label{label:runner}
+	\label{ln:boiling_tank}
+	\label{ln:runner}
 \end{figure}
 
 図\ref{fig:mold}に型の外観を示す。また型各部の呼称を図\ref{fig:mold_description}に示す。
 \gls{シリコーン樹脂}で製作する。
 型は 2 個一組で組み立てて使用する。
-2 個の型は、同一の\chklink{label:prototype}{原型}を用いて製作し、パッキン部の凹凸のみが異なる。
-組み立てた型には\chklink{label:boiling_tank}{沸騰槽}があり、沸騰槽の底はすり鉢状となっている。
+2 個の型は、同一の\link{ln:prototype}{原型}を用いて製作し、パッキン部の凹凸のみが異なる。
+組み立てた型には\link{ln:boiling_tank}{沸騰槽}があり、沸騰槽の底はすり鉢状となっている。
 沸騰槽の底には、ランナーとなる穴が一つ開いており型の空洞部と繋がっている。
 
 以下の手順で製作する。
 
 \begin{enumerate}
-	\item \chklink{label:mold_holder}{原型ホルダー}を清掃し、原型を嵌め込む。
+	\item \link{ln:mold_holder}{原型ホルダー}を清掃し、原型を嵌め込む。
 	原型の基準面は、原型ホルダーの基準面よりわずかに埋まった位置で固定する。
 	これにより、製作した型は原型周辺が僅かに盛り上がった形状となり、\gls{クランプ}した時力が掛かりやすくなる。
 	造形物の周囲に生じる\gls{エポキシ樹脂}の膜を非常に薄くすることができる。
-	\item 原型ホルダーのパッキン部を造形するための溝に、\chklink{label:mold-holder-gasket-jig}{パッキン溝造形用治具}を装着する。パッキン部が凸のものを造形する時は、この手順は省略する。
-	\item 原型ホルダーに\chklink{label:mold-holder-frame}{枠}を装着する。
-	\item \chklink{label:mold-resevoir}{沸騰槽造形用治具}の底面に\gls{両面テープ}と\gls{マスキングテープ}を貼る。
+	\item 原型ホルダーのパッキン部を造形するための溝に、\link{ln:mold-holder-gasket-jig}{パッキン溝造形用治具}を装着する。パッキン部が凸のものを造形する時は、この手順は省略する。
+	\item 原型ホルダーに\link{ln:mold-holder-frame}{枠}を装着する。
+	\item \link{ln:mold-resevoir}{沸騰槽造形用治具}の底面に\gls{両面テープ}と\gls{マスキングテープ}を貼る。
 	\begin{itemize}
 		\item マスキングテープは、両面テープの厚み分の隙間を埋めるために貼る。
 		シリコーン樹脂が隙間に侵入するのを防ぐためである。
@@ -417,7 +417,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 原型
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{原型}\label{label:prototype}
+\section{原型}\label{ln:prototype}
 
 \begin{figure}[htbp]
 	\centering
@@ -437,7 +437,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 
 \begin{enumerate}
 	\item \gls{レジンプリンター}で造形する。形状はこちら: \file{prototype.stl}{prototype.stl}
-	\item 原型の台の部分を\chklink{label:mold_holder}{原型ホルダー}に嵌め込めるよう、所定のサイズになるまで紙やすりで削る。
+	\item 原型の台の部分を\link{ln:mold_holder}{原型ホルダー}に嵌め込めるよう、所定のサイズになるまで紙やすりで削る。
 		レジンプリンターと\gls{3D プリンター}は造形の精度が違うので、原型ホルダーの現物に合わせて、原型の台部分の方を削るのがよい。
 		原型ホルダーに原型を嵌め込んだ時固く保持できるよう、削り過ぎに注意する。
 	\item 原型の天使の輪っか部分の表面を耐水ペーパーで研磨する。耐水ペーパーの番手を 1000、1500、2000、3000 の順番で上げる。各番手は、以下の手順で研磨する。
@@ -451,14 +451,14 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 		\caption{研磨する部分に油性マジックでマーキングを施した様子}
 		\label{fig:marking_for_sanding}
 	\end{figure}
-	原型が小さいので、耐水ペーパーを小さく切って\chklink{label:sanding_paper_holder}{耐水ペーパーホルダー}に貼り付けると作業し易くなる。
+	原型が小さいので、耐水ペーパーを小さく切って\link{ln:sanding_paper_holder}{耐水ペーパーホルダー}に貼り付けると作業し易くなる。
 	\item 鏡面仕上げにする。\gls{コンパウンド}を\gls{バフ}に塗り、\gls{ミニリューター}で研磨する。
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 耐水ペーパーホルダー
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{耐水ペーパーホルダー}\label{label:sanding_paper_holder}
+\section{耐水ペーパーホルダー}\label{ln:sanding_paper_holder}
 小さい物品を耐水ペーパーで研磨する際、耐水ペーパーの面の向きを細かく制御できるようにするために用いる。
 鉛筆のように握って使用する。
 
@@ -477,7 +477,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 原型ホルダー
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{原型ホルダー}\label{label:mold_holder}
+\section{原型ホルダー}\label{ln:mold_holder}
 \gls{3D プリンター}を用いて\gls{PLA}で製作する。
 基準面は積層痕の凹凸を減らすため\gls{パテ}を塗り、乾燥後 400 番の耐水ペーパーで仕上げる。
 この仕上げを省略すると、\gls{エポキシ樹脂}を造形した時樹脂が細かい凹凸に入り込み脱型と清掃が面倒になる。
@@ -488,7 +488,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % パッキン溝造形用治具
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{パッキン溝造形用治具}\label{label:mold-holder-gasket-jig}
+\section{パッキン溝造形用治具}\label{ln:mold-holder-gasket-jig}
 \gls{3D プリンター}を用いて\gls{PLA}で製作する。
 
 形状はこちら: \file{mold-holder-gasket-jig.stl}{mold-holder-gasket-jig.stl}
@@ -496,7 +496,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 沸騰槽造形用治具
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{沸騰槽造形用治具}\label{label:mold-resevoir}
+\section{沸騰槽造形用治具}\label{ln:mold-resevoir}
 \gls{3D プリンター}を用いて\gls{PLA}で製作する。
 
 形状はこちら: \file{mold-holder-resevoir-jig.stl}{mold-holder-resevoir-jig.stl}
@@ -505,7 +505,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 枠
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{枠}\label{label:mold-holder-frame}
+\section{枠}\label{ln:mold-holder-frame}
 \gls{3D プリンター}を用いて\gls{PLA}で製作する。
 
 形状はこちら: \file{mold-holder-frame.stl}{mold-holder-frame.stl}
@@ -513,7 +513,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % スペーサー
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{スペーサー}\label{label:mold_spacer}
+\section{スペーサー}\label{ln:mold_spacer}
 
 \begin{figure}[htbp]
 	\centering
@@ -523,7 +523,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 \end{figure}
 
 図\ref{fig:mold_spacer}にスペーサーの外観を示す。
-\chklink{label:mold}{型}を\chklink{label:mold_shell}{押さえ板}で挟み固定するとき、型が圧縮される量を制限するためのもの。
+\link{ln:mold}{型}を\link{ln:mold_shell}{押さえ板}で挟み固定するとき、型が圧縮される量を制限するためのもの。
 型 1 個につき 2 個製作する。
 形状は幅 10mm、高さ 112mm とする。
 厚みについては、製作した型を組み立てて厚みを計測し、その厚みより 0.2mm 薄くする。
@@ -534,7 +534,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 押さえ板
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{押さえ板}\label{label:mold_shell}
+\section{押さえ板}\label{ln:mold_shell}
 
 \begin{figure}[htbp]
 	\centering
@@ -544,12 +544,12 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 \end{figure}
 
 図\ref{fig:mold_shell}に押さえ板の外観を示す。
-厚さ 12mm の \gls{MDF 板材}を 123mm $ \times $ 112mm に切断する。\chklink{label:mold}{型} 1 個あたり 2 枚製作する。
+厚さ 12mm の \gls{MDF 板材}を 123mm $ \times $ 112mm に切断する。\link{ln:mold}{型} 1 個あたり 2 枚製作する。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % キャピラリ
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{キャピラリ}\label{label:mold_capillary}
+\section{キャピラリ}\label{ln:mold_capillary}
 
 \begin{figure}[htbp]
 	\centering
@@ -578,7 +578,7 @@ Firefox と Acrobat Reader の場合は、どちらも紫色のリンクをダ�
 \chapter{Q\&A}
 
 \qa
-{\chklink{label:mold}{型}の材質はワッカーシリコーン M8012 以外だとだめなのか。}
+{\link{ln:mold}{型}の材質はワッカーシリコーン M8012 以外だとだめなのか。}
 {ワッカーシリコーン M4470、M4503、M8012 を試した。
 他の種類は分からない。
 この三種はいずれも本作品の型として利用できると思う。
@@ -587,7 +587,7 @@ M4503 の引張強度は本作品の型として使うにはオーバースペ�
 安価で程よい柔らかさの M8012 を継続して使用している。}
 
 \qa
-{\chklink{label:mold_holder}{原型ホルダー}のパッキンが二重になっているが、一重としていない理由は。}
+{\link{ln:mold_holder}{原型ホルダー}のパッキンが二重になっているが、一重としていない理由は。}
 {念のため二重にして充分だったのでそのまま使っている。
 脱型した後の樹脂で濡れた痕跡の範囲を見る限り、一重でも充分そうだという判断。
 パッキンを無しにするのは試してみないと分からないが、漏れそうな予感がする。}
@@ -617,7 +617,7 @@ M4503 の引張強度は本作品の型として使うにはオーバースペ�
 \end{tabular}}
 
 \qa
-{\chklink{label:deforming}{脱泡}の操作で使用している\gls{注射器}の選定理由は。}
+{\link{ln:deforming}{脱泡}の操作で使用している\gls{注射器}の選定理由は。}
 {シリンジの断面積が小さく、高粘度の液に対して細い針を使っていても小さい力で操作できることから。
 樹脂を注入する時、注射針がすっぽ抜ける事故を度々起こしたのでルアーロック付きのものを使っている。
 ルアーロック付きであれば、より太い注射器でも問題ないと思う(握力は必要)。}
@@ -627,16 +627,16 @@ M4503 の引張強度は本作品の型として使うにはオーバースペ�
 {試していない。}
 
 \qa
-{\chklink{label:mold_spacer}{スペーサー}の製作で型の厚みより 0.2mm 薄くするとあるが、0.2mm の理由は。}
+{\link{ln:mold_spacer}{スペーサー}の製作で型の厚みより 0.2mm 薄くするとあるが、0.2mm の理由は。}
 {経験則。
 隙間から樹脂が漏れないようにするために必要なクランプ力を維持しつつ、型の変形を最小限に抑えたい、という考え方で試行錯誤して決めた量。
 0.2mm としているが、型の厚みを増やし、クランプ時の圧縮量を減らすのが理想だと思う。}
 
 \qa
-{\chklink{label:prototype}{原型}の台と輪っか部分の境目は谷になっている。この部分の研磨はどうやっているのか。}
+{\link{ln:prototype}{原型}の台と輪っか部分の境目は谷になっている。この部分の研磨はどうやっているのか。}
 {谷の部分の細かい所は研磨できていない。
 なるべく耐水ペーパーやバフが当たるようにはしたが、厳密には台と輪っかの境目は研磨できていない。
-\chklink{label:mold}{型}の貼り合わせ部分となってバリの出る箇所なので、厳重に研磨しても無駄かなと考えている。}
+\link{ln:mold}{型}の貼り合わせ部分となってバリの出る箇所なので、厳重に研磨しても無駄かなと考えている。}
 
 \chapter{調達}
 \printnoidxglossary[style=items,sort=use]
